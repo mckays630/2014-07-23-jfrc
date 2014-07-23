@@ -14,43 +14,32 @@ instructor: ["Sheldon McKay", "William Rowell"]
 helper: ["Anitha Parvatham","Rob Svirskas","Ben Arthur","Christopher Bruns","Don Olbris", "Greg Pinero", "Peter Bukowinski"]
 contact: sheldon.mckay@gmail.com
 ---
-<!--
-    Edit the values in the parameter block above to be appropriate for your bootcamp.
-    Please use three-letter month names for the 'humandate' field.
--->
-
-<!--
-    This block includes the Eventbrite registration widget if 'eventbrite' has been set in the header.
--->
-{% if page.eventbrite %}
-<iframe src="//www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt" frameborder="0" width="100%" scrolling="auto"></iframe>
-{% endif %}
 
 <h2>General Information</h2>
 
 <p>
-  <a href="//software-carpentry.org">Software Carpentry</a>'s mission
-  is to help scientists and engineers become more productive
-  by teaching them basic lab skills for computing
-  like program design, version control, data management, and task automation.
-  This two-day hands-on bootcamp will cover basic concepts and tools;
-  participants will be encouraged to help one another
-  and to apply what they have learned to their own research problems.
+  <a href="http://software-carpentry.org">Software Carpentry</a>'s mission
+  is to help scientists and engineers become more productive
+  by teaching them basic lab skills for computing
+  like program design, version control, data management, and task automation.
+  This two-day hands-on bootcamp will cover basic concepts and tools;
+  participants will be encouraged to help one another
+  and to apply what they have learned to their own research problems.
 </p>
 
 <!-- This block displays the instructors' names if they are available. -->
 {% if page.instructor %}
 <p>
-  <strong>Instructors:</strong>
-  {{page.instructor | join: ', ' %}}
+  <strong>Instructors:</strong>
+  {{page.instructor | join: ', ' %}}
 </p>
 {% endif %}
 
 <!-- This block displays the helpers' names if they are available. -->
 {% if page.helper %}
 <p>
-  <strong>Helpers:</strong>
-  {{page.helper | join: ', ' %}}
+  <strong>Helpers:</strong>
+  {{page.helper | join: ', ' %}}
 </p>
 {% endif %}
 
@@ -60,8 +49,8 @@ contact: sheldon.mckay@gmail.com
     or if specialized prerequisite knowledge is required, please mention that.
 -->
 <p>
-  <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+  <strong>Who:</strong>
+  The course is aimed at graduate students and other researchers.
 </p>
 
 <!--
@@ -69,12 +58,12 @@ contact: sheldon.mckay@gmail.com
 -->
 {% if page.latlng %}
 <p>
-  <strong>Where:</strong>
-  {{ page.address }}.
-  Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{ page.latlng | replace:',','&mlon=' }}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{ page.latlng }}">Google Maps</a>.
+  <strong>Where:</strong>
+  {{ page.address }}.
+  Get directions with
+  <a href="http://www.openstreetmap.org/?mlat={{ page.latlng | replace:',','&mlon=' }}&zoom=16">OpenStreetMap</a>
+  or
+  <a href="http://maps.google.com/maps?q={{ page.latlng }}">Google Maps</a>.
 </p>
 {% endif %}
 
@@ -82,9 +71,9 @@ contact: sheldon.mckay@gmail.com
     Modify the block below if there are any special requirements.
 -->
 <p>
-  <strong>Requirements:</strong>
-  Participants must bring a laptop with a few specific software packages installed
-  (listed below).
+  <strong>Requirements:</strong>
+  Participants must bring a laptop with a few specific software packages installed
+  (listed below).
 </p>
 
 <!--
@@ -92,31 +81,38 @@ contact: sheldon.mckay@gmail.com
     If one hasn't, this block inserts the generic contact address for Software Carpentry.
 -->
 <p>
-  <strong>Contact</strong>:
-  Please mail
-  {% if page.contact %}
-    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
-  {% else %}
-    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
-  {% endif %}
-  for more information.
+  <strong>Contact</strong>:
+  Please mail
+  {% if page.contact %}
+    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
+  {% else %}
+    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
+  {% endif %}
+  for more information.
 </p>
 
 <hr/>
 
+<h2>Workshop Materials</h2>
+
+The workshop materials can be downloaded from <a href="http://goo.gl/xYNx5z">this link</a>.
+
+<h2>Etherpad</h2>
+
+<p>We use Etherpad as a backchannel chat to take and share notes during the workshop. 
+Please also use Etherpad to ask and answer any questions that come up while an instructor is teaching. 
+The workshop Etherpad can be found at: <a target="_BLANK" href="https://etherpad.mozilla.org/2014-07-23-jfrc">https://etherpad.mozilla.org/2014-07-23-jfrc</a></p
+
 <!--
-    Edit this block to show the schedule for your bootcamp.
+    Edit this block to show the syllabus and schedule for your bootcamp.
 -->
-<div class="row-fluid">
 <h2>Schedule</h2>
-
 <p>This schedule may be subject to change.</p>
-
 <table class="table table-striped">
   <tr><th colspan=2>Day 1</th></tr>
   <tr>
     <td>09:00</td>
-    <td><a href="http://mckays630.github.io/2014-07-23-jfrc/overview/overview.html">Overview</a> and setup</td>
+    <td><a target="_BLANK" href="http://mckays630.github.io/2014-07-23-jfrc/slides/pitch.html">Overview</a> and setup</td>
   </tr>
   <tr>
           <td>09:45</td>
@@ -139,7 +135,7 @@ contact: sheldon.mckay@gmail.com
         </tr>
         <tr>
           <td>13:00</td>
-          <td><a href="http://mckays630.github.io/2014-07-23-jfrc/lessons/thw-python/lessons.html">Introduction to Python</a></td>
+          <td><a href="http://mckays630.github.io/2014-07-23-jfrc/lessons/thw-python/lessons.html">Introduction to Python:Variables and Data Structures</a></td>
         </tr>
         <tr>
           <td><em>14:30</em>
@@ -150,7 +146,8 @@ contact: sheldon.mckay@gmail.com
         <tr>
 	  <td>14:45
 	      </td>
-	    <td><a href="http://mckays630.github.io/2014-07-23-jfrc/lessons/thw-python/lessons.html">Python continued</a>
+	    <td><a href="http://mckays630.github.io/2014-07-23-jfrc/lessons/thw-python/lessons.html">Introduction to Python:Flow Control, Functions and Modules</a></td>
+        </tr></a>
 	        </td>
         </tr>
         <tr>
@@ -192,10 +189,9 @@ contact: sheldon.mckay@gmail.com
         </tr>
         <tr>
           <td>16:00</td>
-          <td>Wrap-up and Post-workshop survey</td>
+          <td>Wrap-up and <a href="http://goo.gl/0F6rvb">Post-workshop survey</a></td>
         </tr>
       </table>
-</div>
 <hr/>
 
 <!--
