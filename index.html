@@ -35,6 +35,14 @@ contact: sheldon.mckay@gmail.com
 </p>
 {% endif %}
 
+<!-- This block displays the helpers' names if they are available. -->
+{% if page.helper %}
+<p>
+  <strong>Helpers:</strong>
+  {{page.helper | join: ', ' %}}
+</p>
+{% endif %}
+
 <!--
     Modify this block to reflect the target audience for your bootcamp.
     In particular, if it is only open to people from a particular institution,
